@@ -5,9 +5,12 @@ import LandingPage from "./LandingPage.js";
 try {
   const { html, diagnostics } = await render(<LandingPage />);
   await mkdir("out", { recursive: true });
-  await writeFile("out/landing-page.html", html);
+  await Promise.all([
+    writeFile("out/landing-page.html", html),
+    writeFile("out/index.html", html),
+  ]);
   console.log(formatDiagnostics(diagnostics));
-  console.log("Wrote out/landing-page.html");
+  console.log("Wrote out/index.html and out/landing-page.html");
 } catch (error) {
   if (!(error instanceof ElementsError)) throw error;
   console.error(formatDiagnostics(error.diagnostics));

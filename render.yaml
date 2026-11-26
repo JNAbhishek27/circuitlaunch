@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: circuitlaunch-preview
+    runtime: static
+    buildCommand: npm install && npm run render:landing
+    staticPublishPath: ./out
