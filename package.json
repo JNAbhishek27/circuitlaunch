@@ -1,0 +1,27 @@
+{
+  "name": "circuitlaunch",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A reusable hardware product launch kit built with Hyper Elements.",
+  "type": "module",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "render:landing": "tsx src/outputs/landing-page/render.tsx",
+    "preview:landing": "npx serve out",
+    "render:email": "tsx src/outputs/email/render.tsx",
+    "render:brochure": "tsx src/outputs/brochure/render.tsx",
+    "render:social": "tsx src/outputs/social/render.tsx",
+    "render:all": "node scripts/render-all.mjs"
+  },
+  "dependencies": {
+    "@hyper-elements/react": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "tsx": "latest",
+    "typescript": "latest"
+  }
+}
