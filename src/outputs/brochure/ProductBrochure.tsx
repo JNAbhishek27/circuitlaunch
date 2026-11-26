@@ -91,7 +91,7 @@ function CoverPage() {
           </Text>
         </Column>
         <Image
-          src={{ src: product.product.image.src, width: product.product.image.width, height: product.product.image.height }}
+          src={{ src: product.product.image.localSrc ?? product.product.image.src, width: product.product.image.width, height: product.product.image.height }}
           alt={product.product.image.alt}
           style={{ width: "100%", height: 250, borderRadius: 8, border: { width: 1, style: "solid", color: line } }}
         />

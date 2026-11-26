@@ -1,3 +1,5 @@
+import { pulseNodeEdgeIllustration } from "../assets/pulsenode-edge.js";
+
 /**
  * CircuitLaunch sample launch configuration.
  *
@@ -6,12 +8,14 @@
  * read from this object so a product name or specification change propagates
  * to the email, landing page, brochure, and social card together.
  *
- * Image sources should be publicly accessible HTTPS URLs for HTML output.
+ * Keep a public HTTPS image URL for email clients, which may block data URIs.
+ * `localSrc` is the bundled vector artwork used by page and print renderers.
  * Update product.callToActionUrl and campaign.productPath together when the
  * product landing URL changes.
  */
 export interface ProductImage {
   src: string;
+  localSrc?: string;
   alt: string;
   width: number;
   height: number;
@@ -125,7 +129,8 @@ export const product: LaunchConfig = {
     callToActionUrl: "https://circuitlaunch.example/pulsenode-edge",
     image: {
       src: "https://placehold.co/1200x800/png?text=PulseNode+Edge",
-      alt: "Illustration placeholder for the PulseNode Edge IoT gateway",
+      localSrc: pulseNodeEdgeIllustration,
+      alt: "PulseNode Edge gateway, a compact dark navy IoT device with Ethernet ports and cyan status lights",
       width: 1200,
       height: 800,
     },
