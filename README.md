@@ -4,7 +4,7 @@
 
 CircuitLaunch is a small React and TypeScript project that demonstrates how to use the official [`@hyper-elements/react`](https://www.npmjs.com/package/@hyper-elements/react) library to author a hardware product launch campaign. Its shared sample configuration describes **PulseNode Edge**, a fictional IoT gateway, and the project contains dedicated Hyper Elements designs for an email, responsive web page, A4 brochure, and social launch graphic.
 
-**Status:** source templates and render scripts are present. Generated assets and screenshots are not committed in this repository yet.
+**Status:** source templates and render scripts are present. Generated assets and screenshots still need to be rendered and added before challenge submission.
 
 ---
 
@@ -37,7 +37,7 @@ The render scripts target these files in `out/`:
 
 ### Screenshots
 
-There are no actual screenshots or generated assets in this checkout. The renderer scripts have not been successfully run in this environment, so the sections below intentionally do not display mock screenshots.
+No actual screenshots or generated assets are checked in yet. The renderer scripts have not been successfully run in this environment, so no mock screenshots are shown here. The challenge requires at least one real screenshot, GIF, or video in this README before submission.
 
 After generating and reviewing the outputs, add real screenshots to `docs/screenshots/` and embed them here, for example:
 
@@ -118,13 +118,13 @@ For image output in HTML, provide an HTTPS image URL that readers can access. Th
 - Hyper Elements PDF and image subpath APIs used by the brochure and social-card renderers
 - `tsx` for running TypeScript render scripts directly
 
-The PDF renderer currently calls `renderPdf` from `@hyper-elements/react/pdf`. Verify that export against the installed package documentation when dependencies are installed; package installation and PDF generation have not been verified in this checkout.
+The PDF renderer calls the documented `renderPdf()` API from `@hyper-elements/react/pdf`. Hyper Elements documents `@react-pdf/renderer` as a PDF renderer peer and `satori` plus `@resvg/resvg-js` as image-renderer peers; they are declared in `package.json`.
 
 ## Prerequisites
 
 - Node.js with npm
 - Network access to install the npm dependencies
-- A supported runtime for any optional native/browser dependencies required by the installed Hyper Elements PDF/image packages
+- A supported runtime for the optional `@react-pdf/renderer`, `satori`, and `@resvg/resvg-js` rendering dependencies
 
 The repository does not currently contain a lockfile, `node_modules`, a configured build script, or a test framework.
 
@@ -135,6 +135,8 @@ From the repository root:
 ```sh
 npm install
 ```
+
+This also installs the Hyper Elements CLI and email-client emulator packages for design validation and modeled email previews.
 
 Then run the TypeScript check:
 
@@ -171,6 +173,16 @@ npm run render:landing
 npm run render:brochure
 npm run render:social
 ```
+
+Validate and inspect a design with the installed CLI, for example:
+
+```sh
+npx hyper-elements check src/outputs/email/LaunchEmail.tsx
+npx hyper-elements outline src/outputs/email/LaunchEmail.tsx
+npx hyper-elements preview out/launch-email.html
+```
+
+These are modeled email-client previews; they are not inbox tests.
 
 The landing page can be served locally after generation with:
 
@@ -231,10 +243,10 @@ These are expected output paths, not files included in the repository at present
 - PulseNode Edge, its specifications, brand, and contact details are fictional sample data.
 - The product image points to a placeholder image service and must be replaced with approved product artwork.
 - Generated assets and screenshots are not currently committed.
-- Dependencies have not been installed in this checkout; TypeScript checks, rendering, PDF generation, and PNG inspection have therefore not been verified here.
+- Dependencies have not been installed in this checkout; TypeScript checks, rendering, PDF generation, email previews, and PNG inspection have therefore not been verified here.
 - There is no test framework or build script configured yet.
-- The PDF renderer’s `renderPdf` import needs confirmation against the installed Hyper Elements package’s current guide/reference before relying on brochure generation.
 - `npm run preview:landing` uses `npx serve`; it is a local preview helper, not a deployment setup.
+- Add and embed a genuine screenshot, GIF, or video of the rendered template before submitting to the challenge.
 
 ## License
 

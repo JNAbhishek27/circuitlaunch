@@ -15,10 +15,15 @@
   },
   "dependencies": {
     "@hyper-elements/react": "latest",
+    "@react-pdf/renderer": "latest",
+    "@resvg/resvg-js": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "satori": "latest"
   },
   "devDependencies": {
+    "@hyper-elements/cli": "latest",
+    "@hyper-elements/email-clients": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "tsx": "latest",
