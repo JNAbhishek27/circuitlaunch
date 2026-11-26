@@ -136,7 +136,7 @@ From the repository root:
 npm install
 ```
 
-This also installs the Hyper Elements CLI and email-client emulator packages for design validation and modeled email previews.
+This installs the Hyper Elements library, its render peers, and the CLI. The CLI can validate and outline designs. The email-client emulator is an optional separate package; install a release compatible with the pinned Hyper Elements version if you want modeled client previews.
 
 Then run the TypeScript check:
 

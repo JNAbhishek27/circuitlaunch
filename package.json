@@ -14,7 +14,7 @@
     "render:all": "node scripts/render-all.mjs"
   },
   "dependencies": {
-    "@hyper-elements/react": "latest",
+    "@hyper-elements/react": "0.4.8",
     "@react-pdf/renderer": "latest",
     "@resvg/resvg-js": "latest",
     "react": "latest",
@@ -22,8 +22,7 @@
     "satori": "latest"
   },
   "devDependencies": {
-    "@hyper-elements/cli": "latest",
-    "@hyper-elements/email-clients": "latest",
+    "@hyper-elements/cli": "0.3.3",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "tsx": "latest",
