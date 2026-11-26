@@ -5,7 +5,6 @@
 CircuitLaunch is a small React and TypeScript project that demonstrates how to use the official [`@hyper-elements/react`](https://www.npmjs.com/package/@hyper-elements/react) library to author a hardware product launch campaign. Its shared sample configuration describes **PulseNode Edge**, a fictional IoT gateway, and the project contains dedicated Hyper Elements designs for an email, responsive web page, A4 brochure, and social launch graphic.
 
 ## Screenshots
-<img width="1707" height="865" alt="Screenshot 2026-11-26 at 7 32 36 AM" src="https://github.com/user-attachments/assets/646c03d8-07b3-469c-a9ab-d646a4e4ea8e" />
 <img width="1706" height="916" alt="Screenshot 2026-11-26 at 7 46 30 AM" src="https://github.com/user-attachments/assets/c9ce6e43-a32e-40be-a843-81b5ca74107f" />
 <img width="1706" height="916" alt="Screenshot 2026-11-26 at 7 46 38 AM" src="https://github.com/user-attachments/assets/e4328cc0-452b-46ce-a91a-921a312c98e8" />
 <img width="1706" height="916" alt="Screenshot 2026-11-26 at 7 46 41 AM" src="https://github.com/user-attachments/assets/038e0960-f628-4365-b321-f2763e1df265" />
