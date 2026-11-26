@@ -75,7 +75,7 @@ export function HeroSection() {
           <Text style={{ color: colors.mutedInk, fontSize: 12 }}>Designed for the places where your data is made.</Text>
         </Column>
         <Column style={{ flex: 1, gap: 14, alignItems: "center" }}>
-          <Image src={product.product.image} alt={product.product.image.alt} style={{ width: "100%", maxWidth: 540, borderRadius: layout.cardRadius, border: { width: 1, style: "solid", color: colors.border } }} />
+          <Image src={{ src: product.product.image.src, width: product.product.image.width, height: product.product.image.height }} alt={product.product.image.alt} style={{ width: "100%", maxWidth: 540, borderRadius: layout.cardRadius, border: { width: 1, style: "solid", color: colors.border } }} />
           <Text style={{ color: colors.mutedInk, fontSize: 12, textAlign: "center" }}>{product.product.name} · {product.product.category}</Text>
         </Column>
       </Row>
